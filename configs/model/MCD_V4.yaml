@@ -1,0 +1,41 @@
+embedding_size: 64
+feat_embed_dim: 64
+
+n_mm_layers: 1
+n_layers: 2
+knn_k: 10
+mm_image_weight: 0.1
+# learning_rate: [0.001,0.0005]
+learning_rate: [0.0005]
+reg_weight: [0.001]
+
+dropout: 0.5
+
+temp: 0.1
+
+mi_weight: 0.01
+
+v_drop_rate: 0.1
+t_drop_rate: 0.1 
+use_aug: False
+# diff_weight: [0.1,0.2,0.4,0.5]
+diff_weight: [0.5]
+timesteps: 20
+beta_start: 0.0001
+beta_end: 0.02
+# beta_sche: ["linear", "exp", "cosine", "sqrt"]
+beta_sche: "linear"
+# w1: [0.005,0.01,0.1] 
+# w2: [0.005,0.01,0.1]
+w1: [0.01]
+w2: [0.01]
+ch: 8
+out_ch: 3
+num_res_blocks: 2
+unet_dropout: 0.1
+
+in_channels: 3
+hidden_size: 64
+resamp_with_conv: True
+
+hyper_parameters: ["reg_weight","w1","w2","learning_rate","diff_weight"]

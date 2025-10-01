@@ -1,0 +1,28 @@
+embedding_size: 64
+feat_embed_dim: 64
+
+
+n_ui_layers: [3]
+n_mm_layers: [1]
+
+dropout: [0.1]
+reg_weight: 1e-5
+num_heads: 4 
+k_graphlearner: 10
+dropedge_rate : [0.1,0.2,0.3]
+activation_learner: relu
+aug_lambda: 0.05
+proj_dim: 64
+hidden_dim: 64
+weight_mi: 0.01
+knn_k: 10
+temperature: 0.2
+image_knn_k: 10
+text_knn_k: 10
+learning_rate: [0.0005, 0.001, 0.005]
+
+
+use_neg_sampling: True
+
+hyper_parameters: ["n_ui_layers","n_mm_layers","dropout","dropedge_rate","learning_rate"]
+

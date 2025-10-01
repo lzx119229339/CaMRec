@@ -1,0 +1,48 @@
+embedding_size: 64
+feat_embed_dim: 64
+
+n_mm_layers: 1
+n_layers: 2
+knn_k: 10
+
+# learning_rate: [0.001,0.0005]
+learning_rate: [0.0005]
+reg_weight: 0.001
+
+dropout: 0.5
+v_drop_rate: 0.1
+t_drop_rate: 0.1 
+
+diff_weight: [0.5,0.6,0.7]
+timesteps: [20]
+beta_start: 0.0001
+beta_end: 0.02
+# beta_sche: ["linear", "exp", "cosine", "sqrt"]
+beta_sche: "linear"
+w1: [0.01,0.05]
+w2: [0.01,0.05]
+
+
+in_channels: 3
+hidden_size: 64
+resamp_with_conv: True
+## VQ
+num_envs: [50,150,250,500]
+env_dim: 64
+vq_weight: [0.5,0.8,1,1.2]
+beta: 0.2
+
+walk_length: [30]
+ssl_weight: [0.08,0.1,0.12,0.14]
+choosing_tmp: [0.2]
+
+image_knn_k: [10,20,30,40,45]
+text_knn_k: [40,45]
+construction: ["cat"]
+
+ch: 8
+out_ch: 3
+num_res_blocks: 2
+unet_dropout: 0.1
+
+hyper_parameters: ["diff_weight","ssl_weight","w1","w2","walk_length","timesteps","learning_rate","choosing_tmp","vq_weight","num_envs","construction","image_knn_k","text_knn_k"]
